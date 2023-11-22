@@ -2,16 +2,10 @@
 
 namespace Database\Seeders;
 
-<<<<<<< HEAD
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\App;
-=======
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
-use App\Models\User;
->>>>>>> a10a27476b3c45e1211ba957f2dc377d7bd3c078
 
 class UsersTableSeeder extends Seeder
 {
