@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,12 +52,14 @@ Route::get('/', function () {
     // $user = \App\Models\User::find(34);
     // $user->delete();
     
-     $user = \App\Models\User::whereIn('id', [31,30]);
-     $user->delete();
+    //  $user = \App\Models\User::whereIn('id', [22]);
+    //  $user->delete();
 
     return view('welcome');
 });
 
 Route::get('hello/{name}', function($name) {
-    return view('hello', compact('name',));
+    return view('hello', compact('name'));
 });
+
+Route::get('/users', [UserController::class, 'index']);
