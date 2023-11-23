@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Test\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Test\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,4 +63,9 @@ Route::get('hello/{name}', function($name) {
     return view('hello', compact('name'));
 });
 
-Route::get('/users', [UserController::class, 'index']);
+// Route::get('/users', [UserController::class, 'index']);
+// Route::get('/users/{id}', [UserController::class, 'show']);
+// Route::get('/users', [UserController::class, 'save']);
+
+Route::resource('/users', UserController::class);
+Route::resource('/products', ProductController::class);
